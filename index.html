@@ -22,6 +22,7 @@
     </div>
     <button id="button">连线回显</button>
     <button id="clear">清除连线</button>
+    <span id="position">坐标：</span>
     <script src="script.js"></script>
     <script src="./addLine.js"></script>
 
@@ -43,6 +44,8 @@
           pointX,
           pointY,
         });
+        const printPosition = document.getElementById('position');
+        printPosition.textContent = `坐标：x: ${pointX} --- y: ${pointY}`;
 
         if (point1.length === 0) {
           // 选择起始 point
